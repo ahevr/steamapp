@@ -20,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/","PostController@index")->name("index");
 
+
 Route::get("/oyun-ara/{name}","PostController@search")->name("search");
+
+
+//Route::get("/{name}","PostController@search")->name("search");
+//veya böyle
+
 
 Route::get("/oyun-detay/{appid}","PostController@show")->name("getData.show");
 
