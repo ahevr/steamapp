@@ -26,7 +26,7 @@ class PostController extends Controller
 //
 //        $results = $steamData->json();
 //
-//        return view("homepage")->with("results",$resultss);
+//        return view("homepage")->with("results",$results);
 
 
 
