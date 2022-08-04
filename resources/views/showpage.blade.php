@@ -57,7 +57,7 @@
                        {{ strip_tags(trim($steamRow ["data"]["pc_requirements"]["minimum"]))}}
                    </p>
                     <p>
-{{--                        {{ strip_tags(trim($steamRow ["data"]["pc_requirements"]["recommended"]))}}--}}
+                        {{ strip_tags(trim($steamRow ["data"]["pc_requirements"]["recommended"]))}}
                     </p>
 
                 </div>
