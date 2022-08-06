@@ -22,6 +22,6 @@ Route::get("/","PostController@index")->name("index");
 
 Route::get("/oyun-detay/{appid}","PostController@show")->name("getData.show");
 
-Route::get("/{name}","PostController@search")->name("index.search");
+Route::get("/{name?}","PostController@search")->name("getData.search");
 
 

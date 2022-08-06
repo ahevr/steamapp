@@ -18,9 +18,11 @@ class PostController extends Controller
 
     public function search($name){
 
-        $posts = Http::get("https://steamcommunity.com/actions/SearchApps/$name")->json();
+        $posts = Http::get("https://steamcommunity.com/actions/SearchApps/$name");
 
-       return view("searchpage")->with("posts",$posts);
+        $results = $posts->object();
+
+       return view("page.searchpage")->with("results",$results);
 
     }
 
@@ -28,11 +30,11 @@ class PostController extends Controller
 
     public function show($appid){
 
-        //arama yapıldıktan sonra detayların döndüğü yer
+        $posts = Http::get("https://store.steampowered.com/api/appdetails?appids=$appid&l=turkish");
 
-        $posts = Http::get("https://store.steampowered.com/api/appdetails?appids=$appid&l=turkish")->json();
+        $result = $posts->object();
 
-        return view("showpage")->with("posts",$posts);
+        return view("page.gamedetail")->with("result",$result);
 
     }
 

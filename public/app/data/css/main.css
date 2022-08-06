@@ -14,6 +14,10 @@ html {
  */
 body {
   margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
 }
 
 /**
@@ -802,7 +806,7 @@ legend {
 }
 
 .choices__placeholder {
-  opacity: .5;
+  opacity: 0.1;
 }
 
 /*=====  End of Choices  ======*/
@@ -854,7 +858,7 @@ button {
 
 .s130 form .inner-form .input-field input {
   height: 100%;
-  background: transparent;
+  /*background: transparent;*/
   border: 0;
   display: block;
   width: 100%;
@@ -866,16 +870,19 @@ button {
 .s130 form .inner-form .input-field input.placeholder {
   color: #222;
   font-size: 16px;
+
 }
 
 .s130 form .inner-form .input-field input:-moz-placeholder {
   color: #222;
   font-size: 16px;
+
 }
 
 .s130 form .inner-form .input-field input::-webkit-input-placeholder {
   color: #222;
   font-size: 16px;
+    opacity: 0.4;
 }
 
 .s130 form .inner-form .input-field input:hover, .s130 form .inner-form .input-field input:focus {
@@ -890,7 +897,7 @@ button {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  background: #d9f1e3;
+  background: #ffffff;
 }
 
 .s130 form .inner-form .input-field.first-wrap input {
@@ -928,13 +935,14 @@ button {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  background: #00ad5f;
+  background: rgba(255, 0, 0, 0.49);
   transition: all .2s ease-out, color .2s ease-out;
   font-weight: 300;
 }
 
 .s130 form .inner-form .input-field.second-wrap .btn-search:hover {
-  background: #009451;
+  /*background: #009451;*/
+  background: #ff4f4f;
 }
 
 .s130 form .inner-form .input-field.second-wrap .btn-search:focus {
@@ -944,7 +952,7 @@ button {
 
 .s130 form .info {
   font-size: 15px;
-  color: #ccc;
+  color: #ffffff;
   padding-left: 26px;
 }
 
