@@ -30,7 +30,17 @@
             <span class="info">ex. Game,</span>
         </form>
     </div>
-<script src="{{asset("app/data")}}/js/extention/choices.js"></script>
+
+    <script>
+        var input = document.getElementById("text");
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("btn").click();
+            }
+        });
+    </script>
+    <script src="{{asset("app/data")}}/js/extention/choices.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

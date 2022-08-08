@@ -19,7 +19,6 @@
     @endforeach
 @endsection
 @section("content")
-
     @foreach($result as $steamRow )
         <!--game details section area start-->
         <section class="game_details_section mb-125">
@@ -29,7 +28,12 @@
                         <div class="game_details_inner">
                             <div class="game_details_content top">
                                 <div class="start_now_btn">
+                                    @if(isset($steamRow->data->price_overview->final_formatted))
                                     <a class="btn btn-link"><img src="assets/img/icon/arrrow-icon.webp" alt=""> {{$steamRow->data->price_overview->final_formatted}}</a>
+                                    @else
+                                        <a class="btn btn-link"><img src="assets/img/icon/arrrow-icon.webp" alt="">Free</a>
+
+                                    @endif
                                 </div>
                                 <span>Geliştirici : {{$steamRow->data->developers[0] }}</span>
                                 <br>
@@ -118,7 +122,5 @@
                 </div>
             </div>
         </section>
-        <!--game details section area end-->
     @endforeach
-
 @endsection
