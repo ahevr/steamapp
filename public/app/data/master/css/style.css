@@ -1519,6 +1519,22 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   border-radius: 15px;
 }
 
+
+.yeni{
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    left: 150px;
+}
+@media only screen and (max-width: 767px) {
+    .yeni {
+        position: relative;
+        bottom: 80px;
+        left: 0px;
+    }
+}
+
+
 .mailchimp-error {
   color: #ffffff;
   text-align: center;
@@ -6921,8 +6937,9 @@ section.error_section {
 }
 .single-player-details .mascot-logo {
   position: absolute;
-  bottom: -100px;
+  bottom: -23px;
   right: -50px;
+    opacity: 0.2;
 }
 
 .player-profile {

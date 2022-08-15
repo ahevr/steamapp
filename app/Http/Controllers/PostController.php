@@ -9,9 +9,12 @@ class PostController extends Controller
 {
 
     public function index(){
+        return view("page.homepage");
 
-        return view("homepage");
+    }
 
+    public function aboutUs(){
+        return view("page.aboutus");
     }
 
 
@@ -22,7 +25,7 @@ class PostController extends Controller
 
         $results = $posts->object();
 
-       return view("page.searchpage")->with("results",$results);
+       return view("page.steam.searchpage")->with("results",$results);
 
     }
 
@@ -32,9 +35,14 @@ class PostController extends Controller
 
         $posts = Http::get("https://store.steampowered.com/api/appdetails?appids=$appid&l=turkish");
 
+        $comment = Http::get("https://store.steampowered.com/appreviews/$appid?json=1&l=turkish");
+
         $result = $posts->object();
 
-        return view("page.gamedetail")->with("result",$result);
+        $commentR = collect(json_decode($comment))->collapse();
+
+
+        return view("page.steam.gamedetail")->with("result",$result)->with("commentR", $commentR);
 
     }
 
